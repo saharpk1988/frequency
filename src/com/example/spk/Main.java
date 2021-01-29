@@ -5,13 +5,12 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        //numberOfDeletion("example");
         System.out.println(numberOfDeletion("aaaabbbb"));
     }
 
-    private static int numberOfDeletion(String str){
+    public static int numberOfDeletion(String str){
         int  deletionCount=0;
-        if(str.length()<2){
+        if(str==null || str.length()<2){
             return deletionCount;
         }
 
@@ -27,8 +26,8 @@ public class Main {
         for(Map.Entry<Character,Integer> entry: frequencyCount.entrySet()){
             priorityQueue.add(entry.getValue());
         }
-        System.out.println(priorityQueue);
 
+        // Iterating the queue
         while (!priorityQueue.isEmpty()){
             int count=priorityQueue.poll();
             // After taking the last element from queue, return the deletionCount
