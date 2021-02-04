@@ -6,14 +6,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DeletionTest {
+class Tests {
 
     private NrDeletion nrDeletion;
+    private EqualSideArrays equalSideArrays;
 
     @BeforeEach
     public void setUp(){
         nrDeletion=new NrDeletion();
+        equalSideArrays=new EqualSideArrays();
     }
+
 
 
     @Test
@@ -23,4 +26,6 @@ class DeletionTest {
         assertEquals(0,nrDeletion.numberOfDeletion(null));
         assertEquals(1,nrDeletion.numberOfDeletion("PpppkkKk"));
     }
+
+
 }
